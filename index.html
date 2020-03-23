@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="drivia-favicon.png">
+    <meta charset="UTF-8">
+    <meta name="Description" content="Simple Weather App : PWA : progressive web apps ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="black"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="mobile icon pwa - 512.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Weather PWA">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <meta name="msapplication-starturl" content="/index.html">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Drivia PWA</title>
+</head>
+<body>
+        
+<div class=" container text-center">
+    <h1 class="text-center">Date + Trvia = Drivia App</h1>
+            <h3 class="text-center" style="color: green"> Psst : It works great when offline!</h3>
+
+            <img id="icon" class="img-fluid "
+                 src="drivia.png"
+                 alt="Drivia Image">
+    <br>
+    <span id="day_text" style=" font-size: 5vw"> </span>
+
+    <span id="month_text" style="font-size: 5vw; padding-left:1vw"></span>
+        <p id="drivia_text" class="text-justify text-break lead" style="font-size: 5vw"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    window.addEventListener('onload', async e => {
+    await fetchTrending();
+
+    if ('serviceWorker' in navigator) {
+    try {
+    navigator.serviceWorker.register('cache.js');
+    console.log('Service Worker registered');
+
+    } catch (error) {
+    console.log('Service Worker failed');
+
+    }
+    }
+    });
+    </script>
+</body>
+</html>
