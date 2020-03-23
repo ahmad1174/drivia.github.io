@@ -15,14 +15,24 @@ month_arr[9] = "September";
 month_arr[10] = "October";
 month_arr[11] = "November";
 month_arr[12] = "December";
+//console.log('Month :'+month_arr[month]);
+//console.log("Month : "+month);
+//console.log("Day : "+day);
+const base_url = 'https://www.boredapi.com/api/activity/';
 const month_day_url = month+'/'+day+'/date';
 const url = base_url+month_day_url;
+console.log(base_url);
+
 let drivia = document.getElementById('drivia_text');
 let day_html = document.getElementById('day_text');
 day_html.innerHTML = day;
 let month_html = document.getElementById('month_text');
 let month_name = month_arr[month];
 month_html.innerHTML = month_name;
+fetch(base_url).then(response => response.json()).then(res => {
+    console.log(res);
+    console.log(res.activity);
+    drivia_text.innerHTML =res.activity;
 
 });
 
