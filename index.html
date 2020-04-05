@@ -17,6 +17,8 @@
     <meta name="apple-mobile-web-app-title" content="Weather PWA">
     <meta name="msapplication-starturl" content="/index.html">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>BORED?? PWA</title>
 </head>
 <body >
@@ -24,6 +26,12 @@
 <div class=" container text-center">
     <h1 class="text-center">Bored?? Tap my face!</h1>
             <h3 class="text-center" style="color: green"> Psst : It works great when offline!</h3>
+<br>
+    <div>
+              <button type="button" class="btn" id='nightModeBtn' onclick="darkMode();"> 
+                  <i class="fa fa-moon-o" aria-hidden="true"></i>
+                Night Mode is good for your eyes!</button>
+            </div>
 <img src="drivia.png" alt="Bored?? ICON" width="40%" height="40%"
 class="img-responsive" onclick="fetchData();">
         

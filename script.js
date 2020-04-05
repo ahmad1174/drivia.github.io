@@ -7,6 +7,10 @@ console.log(base_url);
 document.getElementById("activity_heading").style.visibility='hidden';
 document.getElementById("type_heading").style.visibility='hidden';
 document.getElementsByClassName("participants_text")[0].style.visibility='hidden';
+function darkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
 function fetchData(){
 fetch(base_url).then(response => response.json()).then(res => {
    console.log(res);
@@ -21,6 +25,7 @@ document.getElementsByClassName("participants_text")[0].style.visibility='visibl
     document.getElementsByClassName("participants_text")[1].innerHTML = res.participants;
 });
 }
+
 
 
 
