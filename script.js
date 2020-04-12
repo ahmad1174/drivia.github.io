@@ -27,20 +27,7 @@ document.getElementsByClassName("participants_text")[0].style.visibility='visibl
 });
 };
 
-window.addEventListener('onload', async e => {
-  await fetchTrending();
 
-  if ('serviceWorker' in navigator) {
-  try {
-  navigator.serviceWorker.register('/sw.js', {scope: '/'});
-  console.log('Service Worker registered');
-
-  } catch (error) {
-  console.log('Service Worker failed');
-
-  }
-  }
-  });
 
 
 
