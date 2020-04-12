@@ -11,7 +11,7 @@ console.log(base_url);
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
-  }
+  };
 function fetchData(){
 fetch(base_url).then(response => response.json()).then(res => {
    console.log(res);
@@ -25,9 +25,22 @@ document.getElementsByClassName("participants_text")[0].style.visibility='visibl
     document.getElementById("type_text").innerHTML = res.type;
     document.getElementsByClassName("participants_text")[1].innerHTML = res.participants;
 });
-}
+};
 
+window.addEventListener('onload', async e => {
+  await fetchTrending();
 
+  if ('serviceWorker' in navigator) {
+  try {
+  navigator.serviceWorker.register('/sw.js', {scope: '/'});
+  console.log('Service Worker registered');
+
+  } catch (error) {
+  console.log('Service Worker failed');
+
+  }
+  }
+  });
 
 
 
