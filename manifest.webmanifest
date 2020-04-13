@@ -1,11 +1,7 @@
 {
   "name": "Bored??",
   "short_name": "Bored??",
-  "theme_color": "#F8DC25",
-  "background_color": "#fff",
-  "display": "standalone",
-  "Scope": "/",
-  "start_url": "/drivia.github.io/index.html",
+  "description": "Getting bored? Use this app to get aware of creative things you can do when getting bored.",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
@@ -48,5 +44,11 @@
       "type": "image/png"
     }
   ],
-  "splash_pages": null
+  "theme_color": "#F8DC25",
+  "background_color": "#fff",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/drivia.github.io/index.html",
+
+  
 }
