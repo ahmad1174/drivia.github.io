@@ -48,7 +48,5 @@
   "background_color": "#fff",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/drivia.github.io/index.html",
-
-  
+  "start_url": "/drivia.github.io/index.html"
 }
