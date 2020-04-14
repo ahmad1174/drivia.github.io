@@ -12,3 +12,9 @@ self.addEventListener('activate', event => {
     console.log("Fetch call",event);
    
    });
+
+self.addEventListener('beforepromptinstall', e =>{
+
+console.log("Prompt event called!",e);
+
+});
