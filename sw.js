@@ -13,8 +13,3 @@ self.addEventListener('activate', event => {
    
    });
 
-window.addEventListener('beforepromptinstall', e =>{
-
-console.log("Prompt event called!",e);
-
-});
