@@ -1,21 +1,11 @@
 self.addEventListener('install', event => {
+  console.log("Installed",event);
 
-    function onInstall () {
-      return caches.open('static')
-        .then(cache => cache.addAll([
-          '/images/drivia-192.png',
-          '/images/drivia-512.png',
-          '/images/drivia.png',
-          '/images/drivia-favicon.png',
-          '/script.js',
-          '/styles.css',
-          '/index.html',
-          '/'
-        ])
-      );
-    }
+  });
+
+self.addEventListener('activate', event => {
+  console.log("Activated",event);
   
-    event.waitUntil(onInstall(event));
   });
 
   self.addEventListener('fetch', function(event) {
