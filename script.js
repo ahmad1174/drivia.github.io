@@ -22,11 +22,6 @@ document.getElementsByClassName("participants_text")[0].style.visibility='visibl
     document.getElementsByClassName("participants_text")[1].innerHTML = res.participants;
 });
 };
-self.addEventListener('beforepromptinstall', e =>{
-
-console.log("Prompt event called!",e);
-
-});
 
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
@@ -38,7 +33,12 @@ console.log("Prompt event called!",e);
         console.log('ServiceWorker registration failed: ', err);
       });
     });
-  }
+  };
+  window.addEventListener('beforepromptinstall', e =>{
+
+    console.log("Prompt event called!",e);
+    
+    });
 
 
 

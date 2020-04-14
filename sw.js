@@ -13,7 +13,7 @@ self.addEventListener('activate', event => {
    
    });
 
-self.addEventListener('beforepromptinstall', e =>{
+window.addEventListener('beforepromptinstall', e =>{
 
 console.log("Prompt event called!",e);
 
