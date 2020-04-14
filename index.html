@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="images/drivia-favicon.png">
+    <!-- Must -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="PWA,Bored,Qurantine,Corona,Pandemic,COVID-19,SARS-COV-2,
@@ -17,19 +18,18 @@ Progressive,Web,App,Progressive Apps,creative,acitivites,Activity">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>BORED?? Let's Tap!!</title>
+    <title>BORED?? Let's Tap!</title>
 </head>
 <body>
+        
 <div class=" container text-center">
     <h1 class="text-center">Bored?? Tap my face!</h1>
             <h3 class="text-center" style="color: green"> Psst : It works great when offline!</h3>
-    <div>
-              <button type="button" class="btn" id='nightModeBtn' onclick="darkMode();"> 
-                  <i class="fa fa-moon-o" aria-hidden="true"></i>
-                Night Mode is good for your eyes!</button>
-    </div>
+    <div><button type="button" class="btn" id='nightModeBtn' onclick="darkMode();"> 
+ <i class="fa fa-moon-o" aria-hidden="true"></i>Night Mode is good for your eyes!</button></div>
 <img src="images/drivia.png" alt="Bored?? ICON" width="35%" height="35%"
 class="img-responsive" onclick="fetchData();">
+<br>
             <div class="text-left">
     <span style="font-size:3vh;background-color:black;color: white;"
     id="activity_heading" > Activity: </span>  
@@ -38,22 +38,24 @@ class="img-responsive" onclick="fetchData();">
     <span style="font-size: 3vh;background-color:black;color: white;" 
     id="type_heading" >Type: </span> 
         <span id="type_text"style="font-size: 3vh;text-transform: uppercase;"></span>
-     <br>
+        <br>
         <span class="participants_text" 
         style="font-size:3vh;background-color:black;color: white;" >Persons requried: </span> 
         <span class="participants_text" style="font-size:3vh;"></span>
         </div>
     </div>
-
+   <br>
+    <footer>
+    Made with <i class="fa fa-heart pulse"></i> in Quarantine!
+    </footer>
     <script src="script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-    <footer>
-    Made with <i class="fa fa-heart pulse"></i> in Quarantine!
-    </footer>
+ 
+
 
 </body>
 </html>
