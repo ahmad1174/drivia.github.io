@@ -2,8 +2,8 @@ const BASE_CACHE_FILES = [
   '/drivia.github.io',
   '/drivia.github.io/index.html',
   '/drivia.github.io/style.css',
-  //'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
-  //'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+  'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
   //'https://code.jquery.com/jquery-3.3.1.slim.min.js',
   //'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js',
   //'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js',
@@ -29,13 +29,11 @@ self.addEventListener('install', event => {
  console.log("Installed",event);
   event.waitUntil(
     caches.open(boredCache).then(function(cache) {
-      console.log("Static Content Cached",cache);
       return cache.addAll(BASE_CACHE_FILES);
     })
   );
-  
+  console.log("Static Content Cached!");
   });
-
 
 self.addEventListener('activate', event => {
   console.log("Activated",event);
@@ -43,7 +41,17 @@ self.addEventListener('activate', event => {
   });
 
   self.addEventListener('fetch', function(event) {
-    console.log("Fetch call",event);
-   
+    console.log("Fetch call",event.request.url);
+    event.respondWith(
+      caches.open(boredCache).then(function(cache) {
+        return cache.match(event.request).then(function (response) {
+          return response || fetch(event.request).then(function(response) {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        });
+      })
+    );
+    
    });
 
