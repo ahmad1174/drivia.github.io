@@ -30,16 +30,17 @@ self.addEventListener('install', event => {
       return cache.addAll(BASE_CACHE_FILES);
     })
   );
+  console.log("Static Content Cached",event);
   });
 
 
 self.addEventListener('activate', event => {
-  console.log("Activated",event);
+ // console.log("Activated",event);
   
   });
 
   self.addEventListener('fetch', function(event) {
-    console.log("Fetch call",event);
+    //console.log("Fetch call",event);
    
    });
 
