@@ -20,7 +20,9 @@ const BASE_CACHE_FILES = [
   '/drivia.github.io/images/icons/icon-192x192.png',
   '/drivia.github.io/images/icons/icon-384x384.png',
   '/drivia.github.io/images/icons/icon-512x512.png',
-  '/drivia.github.io/script.js'
+  '/drivia.github.io/script.js',
+  'https://www.boredapi.com/api/activity/'
+
 ];
 
 const boredCache = 'static-cache-v1';
