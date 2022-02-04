@@ -10,12 +10,12 @@ var offline_response = [];
 
 for (i=0; i<3; i++){
 
-  fetch(base_url).then(resi => JSON.stringify(resi.json).then(resp => {
+  fetch(base_url).then(resi => resi.json).then(resp => {
     console.log(resp);
    offline_response.push(resp);
     console.log(offline_response[i]);
   })
-  )}
+  }
 
 function darkMode() {
     var element = document.body;
