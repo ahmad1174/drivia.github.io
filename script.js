@@ -10,7 +10,7 @@ var offline_response = []
 
 for (i=0; i<3; i++){
 
-  fetch(base_url).then(resi => json.stringify(resi)).then(resp => {
+  fetch(base_url).then(resi => stringify(resi.json)).then(resp => {
     console.log(resp);
    // offline_response.push(resp);
     console.log(offline_response[i]);
