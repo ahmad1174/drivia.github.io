@@ -6,7 +6,14 @@ document.getElementsByClassName("participants_text")[0].style.visibility='hidden
 const base_url = 'https://www.boredapi.com/api/activity/';
 console.log(base_url);
 
+var offline_response = []
 
+for (i=0; i<3; i++){
+
+  fetch(base_url).then(resi => resi.json()).then(resp => {
+    console.log(resp);
+  })
+}
 
 function darkMode() {
     var element = document.body;
@@ -14,6 +21,7 @@ function darkMode() {
   };
 function fetchData(){
 fetch(base_url).then(response => response.json()).then(res => {
+  console.log(res);
     document.getElementById("activity_heading").style.visibility='visible';
 document.getElementById("type_heading").style.visibility='visible';
 document.getElementsByClassName("participants_text")[0].style.visibility='visible';
