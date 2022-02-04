@@ -6,17 +6,6 @@ document.getElementsByClassName("participants_text")[0].style.visibility='hidden
 const base_url = 'https://www.boredapi.com/api/activity/';
 console.log(base_url);
 
-const offline_response = [];
-
-for (let i=0; i<3; i++){
-console.log('runing');
-  fetch(base_url).then(resi => resi.json()).then(resp => {
-    //console.log(resp);
-   offline_response.push(JSON.stringify(resp));
-  console.log(offline_response[i]);
-  })
-  }
-
 function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
