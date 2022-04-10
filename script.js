@@ -13,7 +13,7 @@ function darkMode() {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register(
-          '/sw.js',
+          'sw.js',
         );
         if (registration.installing) {
           console.log('Service worker installing');
@@ -27,8 +27,6 @@ function darkMode() {
       }
     }
   };
-  
-  // ...
   
   registerServiceWorker();
   
