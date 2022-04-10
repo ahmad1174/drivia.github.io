@@ -19,10 +19,10 @@ function fetchData(){
   self.addEventListener("install", (event) => {
     event.waitUntil(
       addResourcesToCache([
-        "/",
-        "index.html",
-        "style.css",
-        "script.js",
+        "/drivia.github.io",
+        "/drivia.github.io/index.html",
+        "/drivia.github.io/style.css",
+        "/drivia.github.io/script.js",
       ])
     );
   });
