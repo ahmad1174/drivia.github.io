@@ -9,3 +9,5 @@ function fetchData(){
       document.getElementsByClassName("participants_text")[1].innerHTML = res.participants;
   });
   };
+
+
