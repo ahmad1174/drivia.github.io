@@ -44,7 +44,8 @@ function fetchData(){
     event.respondWith(
       fetch(event.request)
       .catch(error => {
-        return "11";
+        console.log(error);
+        return error;
       })
     );
   });
