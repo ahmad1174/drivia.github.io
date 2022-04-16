@@ -41,11 +41,6 @@ function fetchData(){
   
   self.addEventListener('fetch', (event) => {
     console.log("Caught a fetch!",event.request.base_url);
-    event.respondWith(
-      new Response("<h1>Hello!</h1>", {
-        headers: {'Content-Type': 'text/html'}
-      })
-    );
   });
   
 
