@@ -40,12 +40,10 @@ function fetchData(){
   });
   
   self.addEventListener('fetch', (event) => {
-    console.log(event.request);
     event.respondWith(
       fetch(event.request)
       .catch(error => {
         console.log(error);
-        return error;
       })
     );
   });
