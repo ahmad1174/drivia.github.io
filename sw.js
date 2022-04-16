@@ -40,7 +40,7 @@ function fetchData(){
   });
   
   self.addEventListener('fetch', (event) => {
-    console.log("Caught a fetch!",event.request);
+    console.log("Caught a fetch!"+event.request);
   });
   
 
