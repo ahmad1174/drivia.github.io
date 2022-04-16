@@ -1,6 +1,6 @@
 function fetchData(){
   fetch(base_url).then(response => response.json()).then(res => {
-    console.log(res);
+    //console.log(res);
       document.getElementById("activity_heading").style.visibility='visible';
   document.getElementById("type_heading").style.visibility='visible';
   document.getElementsByClassName("participants_text")[0].style.visibility='visible';
@@ -40,7 +40,7 @@ function fetchData(){
   });
   
   self.addEventListener('fetch', (event) => {
-    console.log("Caught a fetch!",event.request.base_url);
+    console.log("Caught a fetch!",event.request);
   });
   
 
