@@ -1,5 +1,5 @@
 
-
+// ahmad1174.github.io/drivia.github.io/
 document.getElementById("activity_heading").style.visibility='hidden';
 document.getElementById("type_heading").style.visibility='hidden';
 document.getElementsByClassName("participants_text")[0].style.visibility='hidden';
