@@ -41,11 +41,7 @@ function fetchData(){
   
   self.addEventListener('fetch', (event) => {
     console.log(event.request.url);
-    event.respondWith(
-      new Response("<h1>Hello!</h1>", {
-        headers: {'Content-Type': 'text/html'}
-      })
-    );
+   // event.respondWith( );
   });
   
 
