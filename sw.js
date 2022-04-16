@@ -40,7 +40,7 @@ function fetchData(){
   });
   
   self.addEventListener('fetch', (event) => {
-    console.log(event.request.url);
+    console.log(event.request);
    // event.respondWith( );
   });
   
